@@ -1,0 +1,209 @@
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc; 
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Roboto" , sans-serif;
+}
+
+.main-btn{
+    background-color: var(--red-color)!important;
+    color: var(--yellow-color)!important;
+}
+/* sttart navbar */
+.navbar{
+    background-color: var(--dark-color);
+    color:var(--green-color);
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus{
+    color:var(--green-color);
+}
+
+.navbar .navbar-toggler{
+    color: white;
+    border-color: white;
+
+}
+
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+
+}
+
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--green-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+}
+/* end navbar */
+
+/* Start landing */
+.landing{
+    background-color: var(--dark-color);
+    height: calc(100vh - 56px);
+}
+/* end landing */
+
+/* Start Features */
+.main-title::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 1px ;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+}
+.features i{
+    color: var(--green-color);
+}
+.features .feat  h4{
+    color: var(--yellow-color);
+}
+/* End Features */
+
+/* Start Work Section  */
+.work-section{
+    background-color: var(--section-color);
+}
+
+.work-section ul li{
+    padding:0  10px;
+    cursor: pointer;
+}
+.work-section ul li.active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.work-section ul li:not(.active):hover{
+    color: var(--red-color);
+}
+.work-section .box{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.work-section .box::after{
+    content: attr(data-work);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #33d1cc8c ;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.5s;
+    transform: translateX(-100%);
+}
+
+.work-section .box:hover::after{
+    transform: translateX(0);
+}
+.work-section .row>*{
+    padding-right: 0;
+}
+/* End Work Section  */
+
+/* start stuff  */
+.stuff .text-area{
+    width: 300px;
+    
+}
+/* end stuff  */
+
+/* start team  */
+.team{
+    background-color: var(--section-color);
+}
+
+.team .header h2{
+    color: var(--yellow-color);
+}
+
+.team .box h4{
+    background-color: var(--green-color);
+    color: white;
+}
+
+/* Start Project */
+.project{
+    background-color: var(--dark-color);
+    color: white;
+}
+/* end Project */
+
+/* start blog  */
+.blog .row{
+    overflow: hidden;
+}
+
+.blog .row>*{
+    padding: 0;
+}
+/* end blog  */
+
+/* start subscribe */
+
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe input[type="text"]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus{
+    outline: none;
+}
+.subscribe input[type="text"]::placeholder{
+    color: white;
+}
+
+/* start footer  */
+
+.footer{
+    background-color: var(--dark-color);
+}
+
+.footer .info span.user{
+    color: var(--green-color);
+}
+
+.footer .info span.company {
+    color: var(--yellow-color);
+}
+.footer .links ul li:hover,
+.footer .about ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+.footer .contact .icons i{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.footer .contact .icons i.active,
+.footer .contact .icons i:hover{
+    opacity: 1;
+    color: white;
+}
+/* end footer  */
